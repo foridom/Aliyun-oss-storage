@@ -664,6 +664,11 @@ class AliOssAdapter extends AbstractAdapter
             $options['Content-Type'] = $mimetype;
         }
 
+        if ($disposition = $config->get('Content-Disposition')) {
+            $options['Content-Disposition'] = $disposition;
+        }
+
+
         return $options;
     }
 
